@@ -1,0 +1,32 @@
+</head>
+
+<body>
+  <div id=app></div>
+
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://cdn.jsdelivr.net/gh/dereckrx/simple-react@latest/index.js"></script>
+  <script>
+
+    const { div, p, ul, li } = simpleReact(React.createElement); 
+
+    const Component = (props) => {
+      const ListItem = (props) => li(props.text);
+
+      return (
+        div(
+          p('Hello Simplicity!'),
+          ul(
+            li('No JSX, only functions!'),
+            li({style: { color: 'red' }}, 
+              'With or without attribute props'),
+            ListItem({text: 'Easy to use with custom components'})))
+      )
+    }
+
+    ReactDOM.render(
+      Component(),
+      document.getElementById('app'),
+    )
+  </script>
+</body>

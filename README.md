@@ -4,6 +4,14 @@
 
 ## Usage
 
+Script tag
+
+```html
+  <script crossorigin src="https://cdn.jsdelivr.net/gh/dereckrx/simple-react@latest/index.js"></script>
+```
+
+Or npm package
+
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
