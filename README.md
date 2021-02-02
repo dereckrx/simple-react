@@ -9,7 +9,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { simpleReact } from 'simple-react';
 
-const { div, p, ul, li } = simpleReact(React.createElement); 
+const { div, ul, li, creatorFor } = simpleReact(React.createElement); 
+
+const p = creatorFor('p'); // Create any missing tags
 
 const Component = (props) => {
   const ListItem = (props) => li(props.text);

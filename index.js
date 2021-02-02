@@ -28,14 +28,18 @@ const simpleReact = (createElement) => {
       "h4",
       "a",
       "ul",
+      "ol",
       "li",
       "input",
       "button",
       "label",
       "textarea",
       "form",
+      "pre",
     ].reduce((acc, tag) => ({ ...acc, [tag]: creatorFor(tag) }), {}),
   };
 };
 
-module.exports = { simpleReact };
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { simpleReact };
+}
