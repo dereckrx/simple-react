@@ -5,7 +5,11 @@
 ## Usage
 
 ```javascript
-const { div, p, ol, li } = simpleReact(React.createElement); 
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { simpleReact } from 'simple-react';
+
+const { div, p, ul, li } = simpleReact(React.createElement); 
 
 const Component = (props) => {
   const ListItem = (props) => li(props.text);
@@ -13,11 +17,16 @@ const Component = (props) => {
   return (
     div(
       p('Hello Simplicity!'),
-      ol(
+      ul(
         li('No JSX, only functions!'),
         li({style: { color: 'red' }}, 
-          'With or without attribute props'))
-        ListItem({text: 'Easy to use with custom components'}),
+          'With or without attribute props'),
+        ListItem({text: 'Easy to use with custom components'})))
   )
 }
+
+ReactDOM.render(
+  Component(),
+  document.getElementById('app'),
+)
 ```
