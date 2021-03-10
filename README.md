@@ -7,7 +7,9 @@
 Script tag
 
 ```html
-  <script crossorigin src="https://cdn.jsdelivr.net/gh/dereckrx/simple-react@latest/index.js"></script>
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/gh/dereckrx/simple-react@latest/index.js"></script>
 ```
 
 Or npm package
